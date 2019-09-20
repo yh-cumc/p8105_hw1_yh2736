@@ -64,7 +64,6 @@ rand_mul_numeric_of_factor_of_log = ques1_data_set$rand_size8_sd * as.numeric(as
 * convert the logical vector to factor, and multiply the random samble by the resule,
   output is `r rand_mul_factor_of_log`
 
-
 * convert the logical vector to factor,and then convert the result to numberic, 
   and multiply the random samble by the resule. output is `r rand_mul_numeric_of_factor_of_log`
   
@@ -84,5 +83,6 @@ ques2_data_set = tibble(
 ```
 
 * THe size of dataset is `r nrow(ques2_data_set) * ncol(ques2_data_set)`
-* the mean, median, and standard deviation of X are `r mean(ques2_data_set$x)`, `r median(ques2_data_set$x)` 
+* The mean, median, and standard deviation of X are `r mean(ques2_data_set$x)`, `r median(ques2_data_set$x)` 
 and `r sd(ques2_data_set$x)`
+* The proportion of cases of for which x+y > 1 is `r sum(ques2_data_set$num_vect) / nrow(ques2_data_set) * 100`%
