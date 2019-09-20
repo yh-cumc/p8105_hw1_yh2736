@@ -31,3 +31,6 @@ ques1_data_set = tibble(
 ## the mean of variable 1
 the mean of variable rand_size8_sd of dataset is `r mean(ques1_data_set$rand_size8_sd)`;
 
+## the mean of variable 2
+the mean of variable log_vect of dataset is `r mean(ques1_data_set$log_vect)`;
+
