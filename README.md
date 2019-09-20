@@ -13,3 +13,5 @@ variable 4 name: fac_len8_lev3
 
 set seed to 550
 
+## setup chunk 2, convert the variable
+
