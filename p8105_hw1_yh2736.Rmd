@@ -88,24 +88,34 @@ and `r sd(ques2_data_set$x)`
 * The proportion of cases of for which x+y > 1 is `r sum(ques2_data_set$num_vect) / nrow(ques2_data_set) * 100`%
 
 ## Figures of question 2
-### Figure 1 
+### make a scatterplot of y vs x with using logical vector as color and save this figure to project directory
 ```{r, Figure1, echo = FALSE}
 ggplot(ques2_data_set, aes(x = x, y = y, color = ques2_data_set$log_vect_larger_than_one)) +  #using logical vector as color
   geom_point() 
 
+
+
 ```
 
-### Figure 2
+```{r, echo = TRUE}
+
+ggsave("random_Sample_y_vs_X.png")
+
+```
+
+
+### make a scatterplot of y vs x with using numeric vector as color
 ```{r, Figure2, echo = FALSE}
 ggplot(ques2_data_set, aes(x = x, y = y, color = ques2_data_set$num_vect)) +     # using numeric vector as color
   geom_point() 
 
 ```
 
-### Figure 3
+### make a scatterplot of y vs x with using logical vector as color
 ```{r, Figure3, echo = FALSE}
 ggplot(ques2_data_set, aes(x = x, y = y, color = ques2_data_set$fact_vect)) +     # using factor vector as color
   geom_point() 
 
 ```
+
 
