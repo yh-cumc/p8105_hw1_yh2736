@@ -11,3 +11,5 @@ variable 2 name: log_vect
 variable 3 name: char_vect_len8
 variable 4 name: fac_len8_lev3
 
+set seed to 550
+
