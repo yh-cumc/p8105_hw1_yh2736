@@ -15,3 +15,10 @@ set seed to 550
 
 ## setup chunk 2, convert the variable
 
+# proble 2
+setup data frame with 5 variable
+variable 1 name: x
+variable 2 name: y
+variable 3:      log_larger_than_one
+variable 4:      num_vect
+variable 5:      fact_vect
