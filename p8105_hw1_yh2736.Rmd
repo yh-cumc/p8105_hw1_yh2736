@@ -9,10 +9,13 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 
+set.seed(500)
+
 ```
 
 
-# question 1, create a data frame
+# question 1
+##  code chunk1: create a data frame
 ```{r, echo = TRUE}
 # dataset of question 1 ques1_data_set including 4 variable: random sample, logical vector, character vector
 # and factor vector
@@ -40,3 +43,27 @@ the mean of variable char_vect_len8 of dataset is `r mean(ques1_data_set$char_ve
 * the mean of variable 4
 the mean of variable fac_len8_lev3 of dataset is `r mean(ques1_data_set$fac_len8_lev3)`;
 
+##  code chunk2: variable convert
+```{r, echo = TRUE}
+# convert the logical vector to numeric, and multiply the random samble by the resule
+rand_mul_numeric_of_log = ques1_data_set$rand_size8_sd * as.numeric(ques1_data_set$log_vect)
+
+# convert the logical vector to factor, and multiply the random samble by the resule
+rand_mul_factor_of_log = ques1_data_set$rand_size8_sd * as.factor(ques1_data_set$log_vect)
+
+
+# convert the logical vector to factor,and then convert the result to numberic, 
+# and multiply the random samble by the resule
+rand_mul_numeric_of_factor_of_log = ques1_data_set$rand_size8_sd * as.numeric(as.factor(ques1_data_set$log_vect))
+
+```
+
+* convert the logical vector to numeric, and multiply the random samble by the resule,
+  output is `r rand_mul_numeric_of_log`
+
+* convert the logical vector to factor, and multiply the random samble by the resule,
+  output is `r rand_mul_factor_of_log`
+
+
+* convert the logical vector to factor,and then convert the result to numberic, 
+  and multiply the random samble by the resule. output is `r rand_mul_numeric_of_factor_of_log`
