@@ -2,29 +2,28 @@
 title: "p8105_hw1_yh2736"
 author: "Yongmei Huang"
 date: "9/20/2019"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+# question 1, create a data frame
+```{r, echo = FALSE}
+# dataset of question 1 ques1_data_set including 4 variable: random sample, logical vector, character vector
+# and factor vector
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+ques1_data_set = tibble(
+  rand_size8_sd = rnorm(8),    # random sample
+  log_vect = rand_size8_sd > 0, # logical vector
+  char_vect_len8 = c("male", "female", "male", "male", "female", "male", "male", "female"),  # character vector
+  fac_len8_lev3 = factor(c("low", "high", "middle", "middle", "low", "low", "high", "middle")) # factor vector
+)
 
-```{r cars}
-summary(cars)
+
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
