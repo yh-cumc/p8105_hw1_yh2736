@@ -13,7 +13,7 @@ library(tidyverse)
 
 
 # question 1, create a data frame
-```{r, echo = FALSE}
+```{r, echo = TRUE}
 # dataset of question 1 ques1_data_set including 4 variable: random sample, logical vector, character vector
 # and factor vector
 
@@ -25,5 +25,9 @@ ques1_data_set = tibble(
 )
 
 
+
 ```
+
+## the mean of variable 1
+the mean of variable rand_size8_sd of dataset is `r mean(ques1_data_set$rand_size8_sd)`;
 
