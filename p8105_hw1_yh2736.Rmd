@@ -37,3 +37,6 @@ the mean of variable log_vect of dataset is `r mean(ques1_data_set$log_vect)`;
 * the mean of variable 3
 the mean of variable char_vect_len8 of dataset is `r mean(ques1_data_set$char_vect_len8)`;
 
+* the mean of variable 4
+the mean of variable fac_len8_lev3 of dataset is `r mean(ques1_data_set$fac_len8_lev3)`;
+
