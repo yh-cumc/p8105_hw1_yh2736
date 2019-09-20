@@ -67,3 +67,19 @@ rand_mul_numeric_of_factor_of_log = ques1_data_set$rand_size8_sd * as.numeric(as
 
 * convert the logical vector to factor,and then convert the result to numberic, 
   and multiply the random samble by the resule. output is `r rand_mul_numeric_of_factor_of_log`
+  
+# question 2
+## chunk 1: setup data frame
+```{r, echo = TRUE}
+## data frame with 5 variable
+ques2_data_set = tibble(
+  x = rnorm(500),   # random sample of size 500 from a standard normal distribution
+  y = rnorm(500),   # random sample of size 500 from a standard normal distribution
+  log_vect_larger_than_one = (x + y) > 1,   #logical vector indicating which X+y>1
+  num_vect = as.numeric(log_vect_larger_than_one),   # A numeric vector created by coercing the above logical vector
+  fact_vect = as.factor(log_vect_larger_than_one)    # A factir vector crated by coercing the above logical vector
+)
+
+```
+
+* THe size of dataset is `r nrow(ques2_data_set) * ncol(ques2_data_set)`
